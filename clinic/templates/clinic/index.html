@@ -6,19 +6,19 @@
 
   <div class="row top">
     <div class="nine columns">
-      <h2><a href="{% url 'index' %}">COVID-19 Clinic</a></h2>
+      <h2><a href="{% url 'index' %}">{% trans "COVID-19 Clinic" %}</a></h2>
     </div>
     <div class="three columns language">
       <form action="{% url 'set_language' %}" method="post">
         {% csrf_token %}
         <input name="next" type="hidden" value="{% url 'index' %}">
-        Language:
+        {% trans "Language" %}:
         <select name="language" onchange="this.form.submit()">
           {% get_current_language as LANGUAGE_CODE %}
           {% get_available_languages as LANGUAGES %}
           {% get_language_info_list for LANGUAGES as languages %}
           {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} {% trans "selected" %}{% endif %}>
               {{ language.name_local }}
             </option>
           {% endfor %}
@@ -42,34 +42,33 @@
   <div class="row start-buttons">
     <div class="one-half column start-button patient">
       <a href="{% url 'disclaimer' %}">
-        <h4>Need help with Coronavirus?</h4>
-        <h5>Click here to video chat with a volunteer doctor, nurse or medical student</h5>
-        <p>It's free, and you don't need a camera or app.</p>
-        <p>Estimated wait time: unknown</p>
+        <h4>{% trans "Need help with Coronavirus?" %}</h4>
+        <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical studen" %}</h5>
+        <p>{% trans "It's free, and you don't need a camera or app." %}</p>
+        <p>{% trans "Estimated wait time" %}: unknown</p>
       </a>
     </div>
 
     <div class="one-half column start-button doctor">
       <a href="{% url 'volunteer' %}">
-        <h4>Healthcare Professionals and Students</h4>
-        <h5>Click here to volunteer now</h5>
+        <h4>{% trans "Healthcare Professionals and Students" %}</h4>
+        <h5>{% trans "Click here to volunteer now" %}</h5>
         <ol>
-          <li>Upload proof of credentials</li>
-          <li>Select languages spoken</li>
-          <li>Confirm COVID-19 knowledge</li>
+          <li>{% trans "Upload proof of credentials" %}</li>
+          <li>{% trans "Select languages spoken" %}</li>
+          <li>{% trans "Confirm COVID-19 knowledge" %}</li>
         </ol>
       </a>
     </div>
   </div>
 
   <div class="row footer">
-    <div class="eight columns call-to-arms">
-      Development help is urgently needed!<br>
-      <a href="https://helpwithcovid.com/projects/147">Volunteer on &lsquo;Help With COVID&rsquo;</a>, <a href="https://discord.gg/CqeH4wA">join us on Discord</a>, or <a href="mailto:contact@doc19.org">email us</a>
+    <div class="eight columns call-to-arms">{% trans "Development help is urgently needed!" %}<br>
+      <a href="https://helpwithcovid.com/projects/147">{% trans "Volunteer on" %} &lsquo;{% trans "Help With COVID" %}&rsquo;</a>, <a href="https://discord.gg/CqeH4wA">{% trans "join us on Discord" %}</a>, or <a href="mailto:contact@doc19.org">{% trans "email us" %}</a>
     </div>
     <div class="four columns terms">
-      <a href="{% url 'privacy' %}">Privacy Policy</a> &bull;
-      <a href="{% url 'terms' %}">Terms of Use</a>
+      <a href="{% url 'privacy' %}">{% trans "Privacy Policy" %}</a> &bull;
+      <a href="{% url 'terms' %}">{% trans "Terms of Use" %}</a>
     </div>
   </div>
 

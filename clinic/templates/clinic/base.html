@@ -1,11 +1,12 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
   <meta charset="utf-8">
-  <title>COVID-19 Clinic - online Coronavirus clinic</title>
-  <meta name="description" content="A virtual COVID-19 clinic. Live video consultations with volunteers.">
+  <title>{% trans "COVID-19 Clinic" %} - {% trans "online Coronavirus clinic" %}</title>
+  <meta name="description" content="{% trans "A virtual COVID-19 clinic. Live video consultations with volunteers." %}">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -22,8 +23,8 @@
 <body>
 
 <div class="banner">
-  <h5>Test Mode</h5>
-  <p>This site is not yet fully up and running, so things may not work correctly. Thanks for your patience!</p>
+  <h5>{% trans "Test Mode" %}</h5>
+  <p>{% trans "This site is not yet fully up and running, so things may not work correctly. Thanks for your patience!" %}</p>
 </div>
 
 {% block content %}

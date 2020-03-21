@@ -1,4 +1,5 @@
 {% extends "clinic/base.html" %}
+{% load i18n %}
 
 {% block head %}
 <meta http-equiv="refresh" content="15">
@@ -8,12 +9,12 @@
 
 <div class="container waiting patient">
   <div class="row top">
-    <h2>COVID-19 Clinic</h2>
-    <h4>Waiting for a volunteer</h4>
-    <p>This page will automatically refresh every 15 seconds.</p>
+    <h2>{% trans "COVID-19 Clinic" %}</h2>
+    <h4>{% trans "Waiting for a volunteer" %}</h4>
+    <p>{% trans "This page will automatically refresh every 15 seconds." %}</p>
     <form action="{% url 'finish' %}" method="post">
       {% csrf_token %}
-      <input class="button" type="submit" value="Cancel">
+      <input class="button" type="submit" value="{% trans "Cancel" %}">
     </form>
   </div>
 </div>
