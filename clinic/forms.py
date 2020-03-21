@@ -32,7 +32,7 @@ class DoctorForm(ModelForm):
 	def clean_self_certification_questions(self):
 		answered = self.cleaned_data.get('self_certification_questions')
 
-		unanswered_count = SelfCertificationQuestion.objects.exclude(id__in=answered.values_list('id', flat=True)).count()
+		unanswered_count = self.fields['self_certification_questions'].queryset.exclude(id__in=answered.values_list('id', flat=True)).count()
 		if unanswered_count > 0:
 			raise ValidationError(_("You must confirm all items."))
 

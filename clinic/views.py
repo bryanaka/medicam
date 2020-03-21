@@ -31,7 +31,7 @@ def volunteer(request):
 			return response
 	else:
 		form = DoctorForm()
-		form.self_certification_questions = SelfCertificationQuestion.objects.filter(language=request.LANGUAGE_CODE)
+		form.fields['self_certification_questions'].queryset = SelfCertificationQuestion.objects.filter(language=request.LANGUAGE_CODE)
 
 	return render(request, 'clinic/volunteer.html', {'form': form})
 
