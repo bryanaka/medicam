@@ -27,6 +27,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
+# default SECRET_KEY
+if DEBUG and not SECRET_KEY:
+    SECRET_KEY = 'x'
+
 ALLOWED_HOSTS = ['localhost', '192.168.1.30', 'doc19.org']
 
 
