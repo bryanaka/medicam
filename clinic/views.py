@@ -1,5 +1,5 @@
 from clinic.forms import DoctorForm
-from clinic.models import Doctor, Language, Patient
+from clinic.models import Doctor, Language, Patient, SelfCertificationQuestion
 from datetime import datetime, timedelta
 from django.conf import settings
 from django.db import transaction
@@ -31,6 +31,7 @@ def volunteer(request):
 			return response
 	else:
 		form = DoctorForm()
+		form.fields['self_certification_questions'].queryset = SelfCertificationQuestion.objects.filter(language=request.LANGUAGE_CODE)
 
 	return render(request, 'clinic/volunteer.html', {'form': form})
 

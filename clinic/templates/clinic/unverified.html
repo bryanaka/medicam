@@ -1,5 +1,5 @@
 {% extends "clinic/base.html" %}
-
+{% load i18n %}
 {% block head %}
 <meta http-equiv="refresh" content="30">
 {% endblock %}
@@ -8,9 +8,9 @@
 
 <div class="container unverified">
   <div class="row top">
-    <h2>COVID-19 Clinic</h2>
-    <h4>Verification in progress...</h4>
-    <p>We will verify your credentials as soon as possible. This page will automatically refresh every 30 seconds.</p>
+    <h2>{% trans "COVID-19 Clinic" %}</h2>
+    <h4>{% trans "Verification in progress..." %}</h4>
+    <p>{% trans "We will verify your credentials as soon as possible. This page will automatically refresh every 30 seconds." %}</p>
   </div>
 </div>
 

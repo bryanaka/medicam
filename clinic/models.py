@@ -24,6 +24,7 @@ class Language(models.Model):
 class SelfCertificationQuestion(models.Model):
 	sort_order = models.PositiveIntegerField(default=0)
 	text = models.TextField()
+	language = models.ForeignKey(Language, models.PROTECT, to_field='ietf_tag', default='en')
 
 	class Meta:
 		ordering = ('sort_order',)

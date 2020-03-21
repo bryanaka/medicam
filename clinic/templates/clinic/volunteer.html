@@ -1,4 +1,5 @@
 {% extends "clinic/base.html" %}
+{% load i18n %}
 {% load static widget_tweaks %}
 
 {% block head %}
@@ -10,15 +11,12 @@
 
 <div class="container volunteer">
   <div class="row top">
-    <h2><a href="{% url 'index' %}">COVID-19 Clinic</a></h2>
-    <h4>Volunteer for video chat</h4>
+    <h2><a href="{% url 'index' %}">{% trans "COVID-19 Clinic" %}</a></h2>
+    <h4>{% trans "Volunteer for video chat" %}</h4>
+    <p>{% trans "Please complete this form" %}.</p>
     <p>
-      Please complete this form.
-    </p>
-    <p>
-      <b>We aim to verify your credentials within a few minutes.</b>
-      After verification, you will immediately be available for video chat sessions.
-      Your verification status will be saved on this device.
+      <b>{% trans "We aim to verify your credentials within a few minutes" %}.</b>
+      {% trans "After verification, you will immediately be available for video chat sessions. Your verification status will be saved on this device." %}
     </p>
 
     <form action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data">
@@ -38,18 +36,16 @@
           {{ form.credentials.errors }}
           {{ form.credentials }}
         </div>
-        <div class="six columns">
-          Acceptable credentials:
-          <ul>
-            <li>Medical or nursing license</li>
-            <li>Proof of enrollment at an in-person medical or nursing school</li>
+        <div class="six columns">{% trans "Acceptable credentials" %}:<ul>
+            <li>{% trans "Medical or nursing license" %}</li>
+            <li>{% trans "Proof of enrollment at an in-person medical or nursing school" %}</li>
           </ul>
         </div>
       </div>
 
       <div class="row">
         <div class="six columns">
-          <b>Languages spoken fluently:</b>
+          <b>{% trans "Languages spoken fluently" %}:</b>
           {{ form.languages.errors }}
           {{ form.languages }}
         </div>
@@ -57,14 +53,14 @@
 
       <div class="row test-cam">
         <div class="six columns">
-          <label>Check your webcam:</label>
-          <input id="test-cam" class="button" type="button" value="Test camera" onclick="this.style.display='none'; showPreview()">
+          <label>{% trans "Test your webcam" %}:</label>
+          <input id="test-cam" class="button" type="button" value="{% trans "Test camera" %}" onclick="this.style.display='none'; showPreview()">
           <div id="local-media"></div>
         </div>
       </div>
 
       <div class="row self-cert">
-        <b>Confirm the following:</b>
+        <b>{% trans "Confirm the following" %}:</b>
         {{ form.self_certification_questions.errors }}
         {% for value, text in form.self_certification_questions.field.choices %}
           <label for="id_self_certification_questions_{{ value }}">
@@ -74,7 +70,7 @@
         {% endfor %}
       </div>
 
-      <input class="button-primary" type="submit" value="Continue">
+      <input class="button-primary" type="submit" value="{% trans "Continue" %}">
     </form>
   </div>
 </div>

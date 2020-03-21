@@ -1,4 +1,5 @@
 {% extends "clinic/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block head %}
@@ -10,16 +11,16 @@
 
 <div class="container session patient">
   <div class="row top">
-    <h2>COVID-19 Clinic</h2>
+    <h2>{% trans "COVID-19 Clinic" %}</h2>
     <div class="row">
         <div class="u-pull-right">
             <form action="{% url 'finish' %}" method="post">
                 {% csrf_token %}
-                <input class="button" type="submit" value="Finish">
+                <input class="button" type="submit" value="{% trans "Finish" %}">
             </form>
         </div>
-        <span>In consultation with <b>{{ doctor.name }}</b> &bull;</span>
-        <span id="connection-status">Connecting...</span>
+        <span>{% trans "In consultation with" %} <b>{{ doctor.name }}</b> &bull;</span>
+        <span id="connection-status">{% trans "Connecting" %}...</span>
     </div>
     <div class="media-container">
         <div id="remote-media"></div>
