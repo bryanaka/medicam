@@ -18,7 +18,7 @@
           {% get_available_languages as LANGUAGES %}
           {% get_language_info_list for LANGUAGES as languages %}
           {% for language in languages %}
-            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} {% trans "selected" %}{% endif %}>
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
               {{ language.name_local }}
             </option>
           {% endfor %}
@@ -43,7 +43,7 @@
     <div class="one-half column start-button patient">
       <a href="{% url 'disclaimer' %}">
         <h4>{% trans "Need help with Coronavirus?" %}</h4>
-        <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical studen" %}</h5>
+        <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical student" %}</h5>
         <p>{% trans "It's free, and you don't need a camera or app." %}</p>
         <p>{% trans "Estimated wait time" %}: unknown</p>
       </a>
