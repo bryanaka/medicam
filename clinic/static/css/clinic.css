@@ -44,6 +44,10 @@ h2 a {
 	margin-top: 20px;
 }
 
+.row.top .language form {
+	margin-bottom: 10px;
+}
+
 .volunteer .button-primary {
 	margin-top: 15px;
 }
@@ -114,6 +118,15 @@ ul.errorlist li {
 	max-width: 300px;
 }
 
-.footer .columns {
-	margin-bottom: 10px;
+.footer .columns, .row.intro {
+	margin-bottom: 15px;
+}
+
+@media (min-width: 500px) {
+	.row.intro p {
+		font-size: 1.1em;
+	}
+	.row.intro .stock-photo {
+		text-align: right;
+	}
 }

@@ -1,5 +1,5 @@
 {% extends "clinic/base.html" %}
-{% load i18n %}
+{% load i18n static %}
 {% block content %}
 
 <div class="container">
@@ -7,10 +7,6 @@
   <div class="row top">
     <div class="nine columns">
       <h2><a href="{% url 'index' %}">COVID-19 Clinic</a></h2>
-      <p>
-        This website is an online Coronavirus clinic.
-        Video chat live with volunteers who can help.
-      </p>
     </div>
     <div class="three columns language">
       <form action="{% url 'set_language' %}" method="post">
@@ -31,12 +27,24 @@
     </div>
   </div>
 
+  <div class="row intro">
+    <div class="eight columns">
+      <p>
+        This website is an online Coronavirus clinic.
+        Video chat live with volunteer medics who can help.
+      </p>
+    </div>
+    <div class="four columns stock-photo">
+      <img src="{% static 'images/telemedicine.jpg' %}" width="250">
+    </div>
+  </div>
+
   <div class="row start-buttons">
     <div class="one-half column start-button patient">
       <a href="{% url 'disclaimer' %}">
-        <h4>If you need help with Coronavirus</h4>
-        <h5>Click here to video chat with someone who can help</h5>
-        <p>You don't need a camera.</p>
+        <h4>Need help with Coronavirus?</h4>
+        <h5>Click here to video chat with a volunteer doctor, nurse or medical student</h5>
+        <p>It's free, and you don't need a camera or app.</p>
         <p>Estimated wait time: unknown</p>
       </a>
     </div>
