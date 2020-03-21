@@ -2,7 +2,7 @@ name: Run django check
 on: [push, pull_request]
 jobs:
   django_check:
-    runs-on: [linux]
+    runs-on: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v1
