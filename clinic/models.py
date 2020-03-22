@@ -41,6 +41,7 @@ def upload_filename(instance, filename):
 
 class Doctor(Participant):
 	name = models.CharField(max_length=70)
+	email = models.EmailField(blank=True, null=True)
 	credentials = models.FileField(upload_to=upload_filename)
 	verified = models.BooleanField(default=False)
 	languages = models.ManyToManyField(Language)

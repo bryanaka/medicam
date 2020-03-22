@@ -38,7 +38,7 @@
     <p>{% trans "Please complete this form" %}.</p>
     <p>
       <b>{% trans "We aim to verify your credentials within a few minutes" %}.</b>
-      {% trans "After verification, you will immediately be available for video chat sessions. Your verification status will be saved on this device." %}
+      {% trans "After verification, you will be available for video chat sessions. Your verification status will be saved on this device, so you can return to the site at any time to accept calls." %}
     </p>
 
     <form id="volunteer-form" action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data" onsubmit="return submitVolunteerForm()">
@@ -54,11 +54,24 @@
 
       <div class="row">
         <div class="six columns">
+          {{ form.email.label_tag }}
+          {{ form.email.errors }}
+          {% render_field form.email class="u-full-width" %}
+        </div>
+        <div class="six columns email-info">
+          {% trans "Providing your email address is optional. We'll only use it to keep you informed about this project." %}
+        </div>
+      </div>
+
+      <div class="row credentials">
+        <div class="six columns">
           {{ form.credentials.label_tag }}
           {{ form.credentials.errors }}
           {{ form.credentials }}
         </div>
-        <div class="six columns">{% trans "Acceptable credentials" %}:<ul>
+        <div class="six columns">
+          {% trans "Acceptable credentials:" %}
+          <ul>
             <li>{% trans "Medical or nursing license" %}</li>
             <li>{% trans "Proof of enrollment at an in-person medical or nursing school" %}</li>
           </ul>
