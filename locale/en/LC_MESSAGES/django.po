@@ -1,0 +1,489 @@
+# Doc19: Medicam English Translation Strings
+# Copyright (C) 2020
+# This file is distributed under the same license as the Medicam package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-22 12:39-0700\n"
+"PO-Revision-Date: 2020-03-22 12:56-0700\n"
+"Last-Translator: Bryan Robles\n"
+"Language-Team: doc19\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: clinic/forms.py:32
+msgid "This type of file is not allowed."
+msgstr "This type of file is not allowed."
+
+#: clinic/forms.py:35
+msgid "Proof of credentials must be less than 20MB."
+msgstr "Proof of credentials must be less than 20MB."
+
+#: clinic/forms.py:44
+msgid "You must confirm all items."
+msgstr "You must confirm all items."
+
+#: clinic/models.py:51
+msgid "notify me no more than once every"
+msgstr "notify me no more than once every"
+
+#: clinic/models.py:52
+msgid "start of quiet hours"
+msgstr "start of quiet hours"
+
+#: clinic/models.py:53
+msgid "end of quiet hours"
+msgstr "end of quiet hours"
+
+#: clinic/templates/clinic/base.html:8
+#: clinic/templates/clinic/disclaimer.html:7
+#: clinic/templates/clinic/disclaimer.html:13
+#: clinic/templates/clinic/faq.html:8 clinic/templates/clinic/index.html:9
+#: clinic/templates/clinic/privacy.html:6
+#: clinic/templates/clinic/session_doctor.html:14
+#: clinic/templates/clinic/session_patient.html:14
+#: clinic/templates/clinic/terms.html:7
+#: clinic/templates/clinic/unverified.html:11
+#: clinic/templates/clinic/volunteer.html:46
+#: clinic/templates/clinic/waiting_patient.html:12
+msgid "COVID-19 Clinic"
+msgstr "COVID-19 Clinic"
+
+#: clinic/templates/clinic/base.html:8
+msgid "online Coronavirus clinic"
+msgstr "online Coronavirus clinic"
+
+#: clinic/templates/clinic/base.html:9
+msgid ""
+"A virtual COVID-19 clinic. Live video consultations with volunteer medics."
+msgstr ""
+"A virtual COVID-19 clinic. Live video consultations with volunteer medics."
+
+#: clinic/templates/clinic/base.html:26
+msgid "Work in Progress"
+msgstr "Work in Progress"
+
+#: clinic/templates/clinic/base.html:27
+msgid ""
+"We are now accepting volunteer applications and scaling up as quickly as "
+"possible. Wait times are currently very long."
+msgstr ""
+"We are now accepting volunteer applications and scaling up as quickly as "
+"possible. Wait times are currently very long."
+
+#: clinic/templates/clinic/disclaimer.html:8
+msgid "Please read and acknowledge the following"
+msgstr "Please read and acknowledge the following"
+
+#: clinic/templates/clinic/disclaimer.html:10
+msgid ""
+"This website is provided in good faith as a last resort for those who are "
+"otherwise unable to obtain help and advice during this unprecedented public "
+"health emergency."
+msgstr ""
+"This website is provided in good faith as a last resort for those who are "
+"otherwise unable to obtain help and advice during this unprecedented public "
+"health emergency."
+
+#: clinic/templates/clinic/disclaimer.html:11
+msgid ""
+"This website is not a healthcare provider, and it may not connect you to a "
+"licensed healthcare provider. We verify volunteers on a best-effort basis."
+msgstr ""
+"This website is not a healthcare provider, and it may not connect you to a "
+"licensed healthcare provider. We verify volunteers on a best-effort basis."
+
+#: clinic/templates/clinic/disclaimer.html:12
+msgid ""
+"If you have a medical emergency, call your local emergency services or go to "
+"the emergency room"
+msgstr ""
+"If you have a medical emergency, call your local emergency services or go to "
+"the emergency room"
+
+#: clinic/templates/clinic/disclaimer.html:13
+msgid "The website is named"
+msgstr "The website is named"
+
+#: clinic/templates/clinic/disclaimer.html:13
+msgid ""
+"to help the site appear in relevant search results; it does not necessarily "
+"mean you will see a doctor."
+msgstr ""
+"to help the site appear in relevant search results; it does not necessarily "
+"mean you will see a doctor."
+
+#: clinic/templates/clinic/disclaimer.html:14
+msgid ""
+"Volunteers are minimally verified and may not be licensed in your "
+"jurisdiction. Any advice you receive from volunteers is taken at your own "
+"risk."
+msgstr ""
+"Volunteers are minimally verified and may not be licensed in your "
+"jurisdiction. Any advice you receive from volunteers is taken at your own "
+"risk."
+
+#: clinic/templates/clinic/disclaimer.html:15
+msgid ""
+"Volunteers may take brief notes about the presenting complaint, symptoms, "
+"and management plan. These notes will be stored according to industry best "
+"practice. Information will not be shared unless required by law."
+msgstr ""
+"Volunteers may take brief notes about the presenting complaint, symptoms, "
+"and management plan. These notes will be stored according to industry best "
+"practice. Information will not be shared unless required by law."
+
+#: clinic/templates/clinic/disclaimer.html:16
+msgid ""
+"Your name or other personally identifying information will not be stored. "
+"Your IP address will be stored to help protect our systems."
+msgstr ""
+"Your name or other personally identifying information will not be stored. "
+"Your IP address will be stored to help protect our systems."
+
+#: clinic/templates/clinic/disclaimer.html:17
+msgid "By continuing, you confirm that you agree to our"
+msgstr "By continuing, you confirm that you agree to our"
+
+#: clinic/templates/clinic/disclaimer.html:17
+#: clinic/templates/clinic/index.html:70 clinic/templates/clinic/privacy.html:7
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: clinic/templates/clinic/disclaimer.html:17
+msgid "and"
+msgstr "and"
+
+#: clinic/templates/clinic/disclaimer.html:17
+#: clinic/templates/clinic/index.html:71 clinic/templates/clinic/terms.html:8
+msgid "Terms of Use"
+msgstr "Terms of Use"
+
+#: clinic/templates/clinic/disclaimer.html:23
+msgid "Enable my camera"
+msgstr "Enable my camera"
+
+#: clinic/templates/clinic/disclaimer.html:25
+msgid "I agree"
+msgstr "I agree"
+
+#: clinic/templates/clinic/faq.html:9
+msgid "Frequently Asked Questions"
+msgstr "Frequently Asked Questions"
+
+#: clinic/templates/clinic/faq.html:13
+msgid "What is COVID-19?"
+msgstr "What is COVID-19?"
+
+#: clinic/templates/clinic/faq.html:14
+msgid ""
+"In early February, the World Health Organization gave the name coronavirus "
+"disease 2019 to the disease caused by the 2019 novel coronavirus. "
+"Coronavirus disease 2019 is abbreviated as COVID-19. COVID can be broken "
+"into three parts, CO stands for corona, VI stands for virus, and D stands "
+"for disease."
+msgstr ""
+"In early February, the World Health Organization gave the name coronavirus "
+"disease 2019 to the disease caused by the 2019 novel coronavirus. "
+"Coronavirus disease 2019 is abbreviated as COVID-19. COVID can be broken "
+"into three parts, CO stands for corona, VI stands for virus, and D stands "
+"for disease."
+
+#: clinic/templates/clinic/faq.html:16
+msgid "How can I protect myself from COVID-19?"
+msgstr "How can I protect myself from COVID-19?"
+
+#: clinic/templates/clinic/faq.html:17
+msgid ""
+"The best way to protect yourself is to avoid exposure to the 2019 novel "
+"coronavirus. If your state or local health officials issue quarantines, "
+"shelter in place orders or other mandates, following these orders will limit "
+"your exposure to the virus."
+msgstr ""
+"The best way to protect yourself is to avoid exposure to the 2019 novel "
+"coronavirus. If your state or local health officials issue quarantines, "
+"shelter in place orders or other mandates, following these orders will limit "
+"your exposure to the virus."
+
+#: clinic/templates/clinic/faq.html:19
+msgid ""
+"Other steps you can take include washing your hands with soap for at least "
+"20 seconds, not touching your face with unwashed hands, and practicing "
+"social distancing."
+msgstr ""
+"Other steps you can take include washing your hands with soap for at least "
+"20 seconds, not touching your face with unwashed hands, and practicing "
+"social distancing."
+
+#: clinic/templates/clinic/faq.html:20
+msgid "What are the symptoms of COVID-19?"
+msgstr "What are the symptoms of COVID-19?"
+
+#: clinic/templates/clinic/faq.html:21
+msgid ""
+"COVID-19 symptoms typically appear 2-14 days after exposure. Symptoms "
+"include fever, cough, and shortness of breath."
+msgstr ""
+"COVID-19 symptoms typically appear 2-14 days after exposure. Symptoms "
+"include fever, cough, and shortness of breath."
+
+#: clinic/templates/clinic/faq.html:23
+msgid "When should I be tested for COVID-19?"
+msgstr ""
+
+#: clinic/templates/clinic/faq.html:24
+msgid ""
+"If you develop symptoms such as fever, cough, or shortness of breath, and "
+"have been in contact with an individual who is known to have COVID-19 or "
+"have been in an area with sustained community spread, please contact your "
+"healthcare provider by phone. Your healthcare provider will determine if you "
+"need testing. If you do not have a primary healthcare provider, contact your "
+"local department of health to arrange testing."
+msgstr ""
+"If you develop symptoms such as fever, cough, or shortness of breath, and "
+"have been in contact with an individual who is known to have COVID-19 or "
+"have been in an area with sustained community spread, please contact your "
+"healthcare provider by phone. Your healthcare provider will determine if you "
+"need testing. If you do not have a primary healthcare provider, contact your "
+"local department of health to arrange testing."
+
+#: clinic/templates/clinic/faq.html:26
+msgid "How can I protect others if I test positive?"
+msgstr "How can I protect others if I test positive?"
+
+#: clinic/templates/clinic/faq.html:27
+msgid ""
+"The best way to protect others is to simply stay home when you are sick, "
+"except to receive medical care."
+msgstr ""
+"The best way to protect others is to simply stay home when you are sick, "
+"except to receive medical care."
+
+#: clinic/templates/clinic/faq.html:28
+msgid ""
+"You can also protect others by covering your sneezes and coughs, wearing a "
+"face mask, and disinfecting commonly touched surfaces on a daily basis."
+msgstr ""
+"You can also protect others by covering your sneezes and coughs, wearing a "
+"face mask, and disinfecting commonly touched surfaces on a daily basis."
+
+#: clinic/templates/clinic/faq.html:30
+msgid "Is there a cure for COVID-19?"
+msgstr "Is there a cure for COVID-19?"
+
+#: clinic/templates/clinic/faq.html:31
+msgid "There is currently no specific cure for COVID-19."
+msgstr "There is currently no specific cure for COVID-19."
+
+#: clinic/templates/clinic/faq.html:32
+msgid ""
+"When an individual is suffering from severe symptoms, he or she may require "
+"hospitalization, supplemental oxygen, or may even require the use of a "
+"ventilator."
+msgstr ""
+"When an individual is suffering from severe symptoms, he or she may require "
+"hospitalization, supplemental oxygen, or may even require the use of a "
+"ventilator."
+
+#: clinic/templates/clinic/index.html:15
+msgid "Language"
+msgstr "Language"
+
+#: clinic/templates/clinic/index.html:33
+msgid "This website is an online Coronavirus clinic."
+msgstr "This website is an online Coronavirus clinic."
+
+#: clinic/templates/clinic/index.html:34
+msgid "Video chat live with volunteer medics who can help."
+msgstr "Video chat live with volunteer medics who can help."
+
+#: clinic/templates/clinic/index.html:45
+msgid "Healthcare Professionals and Students"
+msgstr "Healthcare Professionals and Students"
+
+#: clinic/templates/clinic/index.html:46
+msgid "Click here to volunteer now"
+msgstr "Click here to volunteer now"
+
+#: clinic/templates/clinic/index.html:48
+msgid "Upload proof of credentials"
+msgstr "Upload proof of credentials"
+
+#: clinic/templates/clinic/index.html:49
+msgid "Select languages spoken"
+msgstr "Select languages spoken"
+
+#: clinic/templates/clinic/index.html:50
+#: clinic/templates/clinic/volunteer.html:105
+msgid "Test your webcam"
+msgstr "Test your webcam"
+
+#: clinic/templates/clinic/index.html:57
+msgid "Need help with Coronavirus?"
+msgstr "Need help with Coronavirus?"
+
+#: clinic/templates/clinic/index.html:58
+msgid ""
+"Click here to video chat with a volunteer doctor, nurse, or medical student"
+msgstr ""
+"Click here to video chat with a volunteer doctor, nurse, or medical student"
+
+#: clinic/templates/clinic/index.html:59
+msgid "It's free, and you don't need a camera or app."
+msgstr "It's free, and you don't need a camera or app."
+
+#: clinic/templates/clinic/index.html:60
+msgid "No volunteers currently available"
+msgstr "No volunteers currently available"
+
+#: clinic/templates/clinic/index.html:66
+msgid "Development help is urgently needed!"
+msgstr "Development help is urgently needed!"
+
+#: clinic/templates/clinic/index.html:67
+msgid "Volunteer on"
+msgstr "Volunteer on"
+
+#: clinic/templates/clinic/index.html:67
+msgid "join us in #online-clinic on Discord"
+msgstr "join us in #online-clinic on Discord"
+
+#: clinic/templates/clinic/index.html:67
+msgid "or"
+msgstr "or"
+
+#: clinic/templates/clinic/index.html:67
+msgid "email us"
+msgstr "email us"
+
+#: clinic/templates/clinic/session_doctor.html:19
+#: clinic/templates/clinic/session_patient.html:19
+msgid "Finish"
+msgstr "Finish"
+
+#: clinic/templates/clinic/session_doctor.html:22
+#: clinic/templates/clinic/session_patient.html:23
+msgid "Connecting"
+msgstr "Connecting"
+
+#: clinic/templates/clinic/session_patient.html:22
+msgid "In consultation with"
+msgstr "In consultation with"
+
+#: clinic/templates/clinic/unverified.html:12
+msgid "Verification in progress..."
+msgstr "Verification in progress..."
+
+#: clinic/templates/clinic/unverified.html:13
+msgid "Thank you. We will verify your credentials as soon as possible."
+msgstr "Thank you. We will verify your credentials as soon as possible."
+
+#: clinic/templates/clinic/volunteer.html:47
+msgid "Volunteer for consultations"
+msgstr "Volunteer for consultations"
+
+#: clinic/templates/clinic/volunteer.html:48
+msgid "Please complete this form"
+msgstr "Please complete this form"
+
+#: clinic/templates/clinic/volunteer.html:50
+msgid "We aim to verify your credentials within 24 hours."
+msgstr "We aim to verify your credentials within 24 hours."
+
+#: clinic/templates/clinic/volunteer.html:51
+msgid ""
+"After verification, you will be available for video chat sessions. Your "
+"verification status will be saved on this device, so you can return to the "
+"site at any time to accept calls."
+msgstr ""
+"After verification, you will be available for video chat sessions. Your "
+"verification status will be saved on this device, so you can return to the "
+"site at any time to accept calls."
+
+#: clinic/templates/clinic/volunteer.html:55
+msgid ""
+"Your web browser doesn't support push notifications. If you want to be "
+"notified when patients are waiting, please use Chrome, Firefox, or Edge."
+msgstr ""
+"Your web browser doesn't support push notifications. If you want to be "
+"notified when patients are waiting, please use Chrome, Firefox, or Edge."
+
+#: clinic/templates/clinic/volunteer.html:76
+msgid ""
+"Providing your email address is optional. We'll only use it to keep you "
+"informed about the project."
+msgstr ""
+"Providing your email address is optional. We'll only use it to keep you "
+"informed about the project."
+
+#: clinic/templates/clinic/volunteer.html:87
+msgid "Acceptable credentials:"
+msgstr "Acceptable credentials:"
+
+#: clinic/templates/clinic/volunteer.html:89
+msgid "Medical or nursing license"
+msgstr "Medical or nursing license"
+
+#: clinic/templates/clinic/volunteer.html:90
+msgid "Proof of enrollment at a medical or nursing school"
+msgstr "Proof of enrollment at a medical or nursing school"
+
+#: clinic/templates/clinic/volunteer.html:97
+msgid "Languages spoken fluently"
+msgstr "Languages spoken fluently"
+
+#: clinic/templates/clinic/volunteer.html:106
+msgid "Test camera"
+msgstr "Test camera"
+
+#: clinic/templates/clinic/volunteer.html:112
+msgid "Confirm the following"
+msgstr "Confirm the following"
+
+#: clinic/templates/clinic/volunteer.html:123
+msgid ""
+"We can send a notification to your device if a patient is waiting and no "
+"other volunteers are online. This means you can close your web browser and "
+"we'll let you know when your help is most needed."
+msgstr ""
+"We can send a notification to your device if a patient is waiting and no "
+"other volunteers are online. This means you can close your web browser and "
+"we'll let you know when your help is most needed."
+
+#: clinic/templates/clinic/volunteer.html:126
+msgid "Notify me when I'm needed"
+msgstr "Notify me when I'm needed"
+
+#: clinic/templates/clinic/volunteer.html:134
+msgid "If you prefer, we won't notify you during quiet hours."
+msgstr "If you prefer, we won't notify you during quiet hours."
+
+#: clinic/templates/clinic/volunteer.html:149
+msgid "Continue"
+msgstr "Continue"
+
+#: clinic/templates/clinic/waiting_patient.html:13
+msgid "Waiting for a volunteer"
+msgstr "Waiting for a volunteer"
+
+#: clinic/templates/clinic/waiting_patient.html:14
+msgid "This page will automatically refresh every 15 seconds."
+msgstr "This page will automatically refresh every 15 seconds."
+
+#: clinic/templates/clinic/waiting_patient.html:17
+msgid "Cancel"
+msgstr "Cancel"
+
+#: medicam/settings.py:132
+msgid "English"
+msgstr "English"
+
+#: medicam/settings.py:133
+msgid "Spanish"
+msgstr "Spanish"
