@@ -11,4 +11,5 @@ urlpatterns = [
     path('finish/', views.finish, name='finish'),
     path('privacy/', TemplateView.as_view(template_name='clinic/privacy.html'), name='privacy'),
     path('terms/', TemplateView.as_view(template_name='clinic/terms.html'), name='terms'),
+    path('faq/', TemplateView.as_view(template_name='clinic/faq.html'), name="faq"),
 ]
