@@ -30,8 +30,8 @@
   <div class="row intro">
     <div class="seven columns">
       <p>
-        This website is an online Coronavirus clinic.
-        Video chat live with volunteer medics who can help.
+        {% trans "This website is an online Coronavirus clinic." %}
+        {% trans "Video chat live with volunteer medics who can help." %}
       </p>
     </div>
     <div class="five columns stock-photo">
@@ -45,7 +45,7 @@
         <h4>{% trans "Need help with Coronavirus?" %}</h4>
         <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical student" %}</h5>
         <p>{% trans "It's free, and you don't need a camera or app." %}</p>
-        <p>{% trans "Estimated wait time" %}: unknown</p>
+        <p class="wait-time long">{% trans "No volunteers currently available" %}</p>
       </a>
     </div>
 
@@ -56,7 +56,7 @@
         <ol>
           <li>{% trans "Upload proof of credentials" %}</li>
           <li>{% trans "Select languages spoken" %}</li>
-          <li>{% trans "Confirm COVID-19 knowledge" %}</li>
+          <li>{% trans "Test your webcam" %}</li>
         </ol>
       </a>
     </div>
@@ -64,7 +64,7 @@
 
   <div class="row footer">
     <div class="eight columns call-to-arms">{% trans "Development help is urgently needed!" %}<br>
-      <a href="https://helpwithcovid.com/projects/147">{% trans "Volunteer on" %} &lsquo;{% trans "Help With COVID" %}&rsquo;</a>, <a href="https://discord.gg/CqeH4wA">{% trans "join us on Discord" %}</a>, or <a href="mailto:contact@doc19.org">{% trans "email us" %}</a>
+      <a href="https://helpwithcovid.com/projects/147">{% trans "Volunteer on" %} &lsquo;Help With COVID&rsquo;</a>, <a href="https://discord.gg/CqeH4wA">{% trans "join us in #online-clinic on Discord" %}</a>, {% trans "or" %} <a href="mailto:contact@doc19.org">{% trans "email us" %}</a>
     </div>
     <div class="four columns terms">
       <a href="{% url 'privacy' %}">{% trans "Privacy Policy" %}</a> &bull;

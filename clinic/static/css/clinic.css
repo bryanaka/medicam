@@ -154,3 +154,8 @@ ul.errorlist li {
 .volunteer .credentials li {
 	margin-bottom: 2px;
 }
+
+.wait-time.long {
+	color: #c41200;
+	font-weight: bold;
+}
