@@ -130,6 +130,7 @@ USE_TZ = False
 
 LANGUAGES = [
   ('en', _('English')),
+  ('es', _('Spanish')),
 ]
 
 
