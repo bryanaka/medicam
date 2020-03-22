@@ -36,6 +36,7 @@ function registerForPushNotifications() {
 		}
 	}).catch(function(err) {
 		console.log('An error occurred while retrieving token. ', err);
+		document.getElementById('volunteer-form').submit();
 	});
 
 	messaging.onTokenRefresh(function() {
@@ -45,6 +46,7 @@ function registerForPushNotifications() {
 			sendTokenToServer(refreshedToken);
 		}).catch(function(err) {
 			console.log('Unable to retrieve refreshed token ', err);
+			document.getElementById('volunteer-form').submit();
 		});
 	});
 }
@@ -55,5 +57,5 @@ function sendTokenToServer(token) {
 }
 
 function updateUIForPushPermissionRequired() {
-	//TODO
+	document.getElementById('volunteer-form').submit();
 }
