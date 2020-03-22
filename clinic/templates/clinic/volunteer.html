@@ -43,7 +43,7 @@
 <div class="container volunteer">
   <div class="row top">
     <h2><a href="{% url 'index' %}">{% trans "COVID-19 Clinic" %}</a></h2>
-    <h4>{% trans "Volunteer for video chat" %}</h4>
+    <h4>{% trans "Volunteer for consultations" %}</h4>
     <p>{% trans "Please complete this form" %}.</p>
     <p>
       <b>{% trans "We aim to verify your credentials within 24 hours." %}</b>
@@ -51,7 +51,7 @@
     </p>
 
     <div id="notify-warning" style="display: none">
-      &#x26A0;&#xFE0F; {% trans "Please note that your web browser doesn't support push notifications. If you want to be notified when patients are waiting, please use Chrome, Firefox, or Edge." %}
+      &#x26A0;&#xFE0F; {% trans "Your web browser doesn't support push notifications. If you want to be notified when patients are waiting, please use Chrome, Firefox, or Edge." %}
     </div>
 
     <form id="volunteer-form" action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data" onsubmit="return submitVolunteerForm()">
@@ -86,7 +86,7 @@
           {% trans "Acceptable credentials:" %}
           <ul>
             <li>{% trans "Medical or nursing license" %}</li>
-            <li>{% trans "Proof of enrollment at an in-person medical or nursing school" %}</li>
+            <li>{% trans "Proof of enrollment at a medical or nursing school" %}</li>
           </ul>
         </div>
       </div>
