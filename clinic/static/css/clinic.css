@@ -147,7 +147,7 @@ ul.errorlist li {
 	margin-bottom: 10px;
 }
 
-.volunteer .email-info {
+.volunteer .email-info, #notify-warning {
 	margin-bottom: 20px;
 }
 

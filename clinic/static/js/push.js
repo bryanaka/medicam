@@ -1,3 +1,17 @@
+function isPushSupported() {
+	if (!('serviceWorker' in navigator)) {
+		// Service Workers are not supported.
+		return false;
+	}
+
+	if (!('PushManager' in window)) {
+		// The Push API is not supported. Return
+		return false;
+	}
+
+	return true;
+}
+
 function submitVolunteerForm() {
 	if (document.getElementById('id_notify').checked) {
 		registerForPushNotifications();

@@ -27,6 +27,15 @@
 </script>
 
 <script src="{% static 'js/push.js' %}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (isPushSupported()) {
+      document.getElementById('notify-row').style.display = 'block';
+    } else {
+      document.getElementById('notify-warning').style.display = 'block';
+    }
+  });
+</script>
 {% endblock %}
 
 {% block content %}
@@ -40,6 +49,10 @@
       <b>{% trans "We aim to verify your credentials within a few minutes" %}.</b>
       {% trans "After verification, you will be available for video chat sessions. Your verification status will be saved on this device, so you can return to the site at any time to accept calls." %}
     </p>
+
+    <div id="notify-warning" style="display: none">
+      &#x26A0;&#xFE0F; {% trans "Please note that your browser doesn't support push notifications. If you want to be notified when patients are waiting, please use Chrome, Firefox, or Edge." %}
+    </div>
 
     <form id="volunteer-form" action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data" onsubmit="return submitVolunteerForm()">
       {% csrf_token %}
@@ -59,7 +72,7 @@
           {% render_field form.email class="u-full-width" %}
         </div>
         <div class="six columns email-info">
-          {% trans "Providing your email address is optional. We'll only use it to keep you informed about this project." %}
+          {% trans "Providing your email address is optional. We'll only use it to keep you informed about the project." %}
         </div>
       </div>
 
@@ -105,7 +118,7 @@
         {% endfor %}
       </div>
 
-      <div class="row notify">
+      <div class="row notify" id="notify-row" style="display: none">
         <p>{% trans "We can send a notification to your device if a patient is waiting and no other volunteers are online. This means you can close your browser and we'll let you know when your help is most needed." %}</p>
         <label for="id_notify">
           <input type="checkbox" id="id_notify" name="notify" onchange="document.getElementById('notify-options').style.display = this.checked ? 'block' : 'none'"{% if form.notify.value %} checked{% endif %}>
