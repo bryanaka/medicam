@@ -5,7 +5,7 @@ function isPushSupported() {
 	}
 
 	if (!('PushManager' in window)) {
-		// The Push API is not supported. Return
+		// The Push API is not supported.
 		return false;
 	}
 
@@ -36,7 +36,7 @@ function registerForPushNotifications() {
 		}
 	}).catch(function(err) {
 		console.log('An error occurred while retrieving token. ', err);
-		document.getElementById('volunteer-form').submit();
+		document.getElementById('volunteer-form').submit(); //TODO
 	});
 
 	messaging.onTokenRefresh(function() {
@@ -46,7 +46,7 @@ function registerForPushNotifications() {
 			sendTokenToServer(refreshedToken);
 		}).catch(function(err) {
 			console.log('Unable to retrieve refreshed token ', err);
-			document.getElementById('volunteer-form').submit();
+			document.getElementById('volunteer-form').submit(); //TODO
 		});
 	});
 }
@@ -57,5 +57,5 @@ function sendTokenToServer(token) {
 }
 
 function updateUIForPushPermissionRequired() {
-	document.getElementById('volunteer-form').submit();
+	document.getElementById('volunteer-form').submit(); //TODO
 }
