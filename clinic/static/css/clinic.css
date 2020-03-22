@@ -157,5 +157,8 @@ ul.errorlist li {
 
 .wait-time.long {
 	color: #c41200;
+}
+
+.faq h6 {
 	font-weight: bold;
 }
