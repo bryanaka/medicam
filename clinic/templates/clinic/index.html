@@ -40,15 +40,6 @@
   </div>
 
   <div class="row start-buttons">
-    <div class="one-half column start-button patient">
-      <a href="{% url 'disclaimer' %}">
-        <h4>{% trans "Need help with Coronavirus?" %}</h4>
-        <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical student" %}</h5>
-        <p>{% trans "It's free, and you don't need a camera or app." %}</p>
-        <p class="wait-time long">{% trans "No volunteers currently available" %}</p>
-      </a>
-    </div>
-
     <div class="one-half column start-button doctor">
       <a href="{% url 'volunteer' %}">
         <h4>{% trans "Healthcare Professionals and Students" %}</h4>
@@ -58,6 +49,15 @@
           <li>{% trans "Select languages spoken" %}</li>
           <li>{% trans "Test your webcam" %}</li>
         </ol>
+      </a>
+    </div>
+
+    <div class="one-half column start-button patient">
+      <a href="{% url 'disclaimer' %}">
+        <h4>{% trans "Need help with Coronavirus?" %}</h4>
+        <h5>{% trans "Click here to video chat with a volunteer doctor, nurse, or medical student" %}</h5>
+        <p>{% trans "It's free, and you don't need a camera or app." %}</p>
+        <p class="wait-time long">{% trans "No volunteers currently available" %}</p>
       </a>
     </div>
   </div>
