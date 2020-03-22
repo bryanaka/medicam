@@ -1,19 +1,26 @@
 import os
 
+from django import forms
 from django.conf import settings
 from django.core.exceptions import ValidationError
-from django.forms import ModelForm
 from django.forms.widgets import CheckboxSelectMultiple
 from django.utils.translation import gettext as _
 
 from clinic.models import Doctor, SelfCertificationQuestion
+from durationwidget.widgets import TimeDurationWidget
 
-class DoctorForm(ModelForm):
+class TimeInput(forms.TimeInput):
+	input_type = 'time'
+
+class DoctorForm(forms.ModelForm):
 	class Meta:
 		model = Doctor
-		fields = ['name', 'credentials', 'languages', 'self_certification_questions']
+		fields = ['name', 'credentials', 'languages', 'notify', 'notify_interval', 'quiet_time_start', 'quiet_time_end', 'fcm_token', 'self_certification_questions']
 		widgets = {
 			'languages': CheckboxSelectMultiple(),
+			'notify_interval': TimeDurationWidget(show_days=False, show_minutes=False, show_seconds=False),
+			'quiet_time_start': TimeInput(),
+			'quiet_time_end': TimeInput(),
 			'self_certification_questions': CheckboxSelectMultiple(),
 		}
 

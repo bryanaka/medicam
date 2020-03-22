@@ -1,5 +1,8 @@
 from django.db import models
+from django.utils.translation import gettext as _
+
 import os, uuid
+from datetime import timedelta
 
 class Participant(models.Model):
 	uuid = models.UUIDField(unique=True, default=uuid.uuid4, editable=False)
@@ -42,6 +45,12 @@ class Doctor(Participant):
 	verified = models.BooleanField(default=False)
 	languages = models.ManyToManyField(Language)
 	last_online = models.DateTimeField(blank=True, null=True)
+	last_notified = models.DateTimeField(blank=True, null=True)
+	notify = models.BooleanField(default=True)
+	notify_interval = models.DurationField(blank=True, null=True, verbose_name=_("notify me no more than once every"), default=timedelta(hours=6))
+	quiet_time_start = models.TimeField(blank=True, null=True, verbose_name=_("start of quiet hours"))
+	quiet_time_end = models.TimeField(blank=True, null=True, verbose_name=_("end of quiet hours"))
+	fcm_token = models.TextField(blank=True, null=True)
 	self_certification_questions = models.ManyToManyField(SelfCertificationQuestion)
 
 	def __str__(self):

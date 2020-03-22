@@ -130,3 +130,19 @@ ul.errorlist li {
 		text-align: right;
 	}
 }
+
+.volunteer .row.notify, #notify-options {
+	margin-top: 20px;
+}
+
+.volunteer .notify-interval p.help {
+	display: none;
+}
+
+.volunteer .notify-interval span.help {
+	padding-left: 5px;
+}
+
+#notify-options p {
+	margin-bottom: 10px;
+}

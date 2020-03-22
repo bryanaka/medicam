@@ -5,6 +5,28 @@
 {% block head %}
 <script src="//media.twiliocdn.com/sdk/js/video/releases/2.0.0/twilio-video.min.js"></script>
 <script src="{% static 'js/video.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/time-input-polyfill"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-messaging.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBEmp9zzycP_l1VgiIT0QNLtO5ZsWDanrw",
+    authDomain: "medicam-1670b.firebaseapp.com",
+    databaseURL: "https://medicam-1670b.firebaseio.com",
+    projectId: "medicam-1670b",
+    storageBucket: "medicam-1670b.appspot.com",
+    messagingSenderId: "243857898828",
+    appId: "1:243857898828:web:5460a867999ed7d1a663e9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="{% static 'js/push.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +41,7 @@
       {% trans "After verification, you will immediately be available for video chat sessions. Your verification status will be saved on this device." %}
     </p>
 
-    <form action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data">
+    <form id="volunteer-form" action="{% url 'volunteer' %}" method="post" enctype="multipart/form-data" onsubmit="return submitVolunteerForm()">
       {% csrf_token %}
 
       <div class="row">
@@ -68,6 +90,33 @@
             <span class="label-body">{{ text|safe }}</span>
           </label>
         {% endfor %}
+      </div>
+
+      <div class="row notify">
+        <p>{% trans "We can send a notification to your device if a patient is waiting and no other volunteers are online. This means you can close your browser and we'll let you know when your help is most needed." %}</p>
+        <label for="id_notify">
+          <input type="checkbox" id="id_notify" name="notify" onchange="document.getElementById('notify-options').style.display = this.checked ? 'block' : 'none'"{% if form.notify.value %} checked{% endif %}>
+          <span class="label-body">{% trans "Notify me when I'm needed" %}</span>
+        </label>
+        <div id="notify-options"{% if not form.notify.value %} style="display: none"{% endif %}>
+          <div class="notify-interval">
+            {{ form.notify_interval.label_tag }}
+            {{ form.notify_interval.errors }}
+            {{ form.notify_interval }}
+          </div>
+          <p>{% trans "If you prefer, we won't notify you during quiet hours." %}</p>
+          <div class="quiet-time-start">
+            {{ form.quiet_time_start.label_tag }}
+            {{ form.quiet_time_start.errors }}
+            {{ form.quiet_time_start }}
+          </div>
+          <div class="quiet-time-end">
+            {{ form.quiet_time_end.label_tag }}
+            {{ form.quiet_time_end.errors }}
+            {{ form.quiet_time_end }}
+          </div>
+        </div>
+        {{ form.fcm_token.as_hidden }}
       </div>
 
       <input class="button-primary" type="submit" value="{% trans "Continue" %}">

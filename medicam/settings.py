@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # dependencies
+    'durationwidget',
     'widget_tweaks',
 
     # apps

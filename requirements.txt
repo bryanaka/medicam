@@ -1,5 +1,6 @@
 boto3
 dj-database-url
+django-durationwidget
 django-ipware
 django-storages
 django-widget-tweaks
