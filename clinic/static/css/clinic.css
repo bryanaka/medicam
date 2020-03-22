@@ -117,3 +117,7 @@ ul.errorlist li {
 .footer .columns {
 	margin-bottom: 10px;
 }
+
+.faq h6 {
+	font-weight: bold;
+}
