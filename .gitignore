@@ -104,7 +104,7 @@ localhost.pem
 
 # static files generated from Django application using `collectstatic`
 # media
-# static
+staticfiles
 
 # MacOS
 .DS_Store
